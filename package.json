@@ -4,7 +4,8 @@
   "description": "- [About](#about)\r - [Root features](#root-features)\r - [Features](#features)\r     - [Root features](#root-features)\r     - [Additional features](#additional-features)\r - [Tech stacks](#tech-stacks)\r - [Run app](#run-app)\r     - [Step 1 - Run docker compose](#step-1)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
