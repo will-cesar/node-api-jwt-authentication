@@ -14,3 +14,4 @@ This file contains all the notes and important instructions to the project.
 - Install the dev dependencies:
     - [nodemon](https://www.npmjs.com/package/nodemon) - `npm i --save-dev nodemon` - create a server to run the app
 - Create a script command inside the `package.json` to start the application. `"start": "nodemon app.js"`
+- Create a `app.js` file to be the start file 

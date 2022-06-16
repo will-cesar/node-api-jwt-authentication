@@ -66,3 +66,5 @@ At other times:
 ```
 docker start [container-id] or [container-name]
 ```
+
+### <a name="step-2"></a> Step 2 - Run the app
