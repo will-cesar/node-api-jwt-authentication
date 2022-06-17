@@ -12,6 +12,7 @@
         - [Step 1 - Run docker compose](#step-1)
         - [Step 2 - Setting environment variables](#step-2)
         - [Step 3 - Run the App](#step-3)
+    - [Production environment](#production-environment)
 
 ## <a name="about"></a> About
 - Repository to JWT Authentication API
@@ -81,3 +82,9 @@ docker start [container-id] or [container-name]
 ```
 npm run dev
 ```
+
+### <a name="production-environment"></a> Production environment
+
+- Link: https://node-api-jwt-authentication.herokuapp.com
+- The application is hosted on [heroku](https://dashboard.heroku.com)
+- The mongoDB is hostend on [MongoDB Atlas](https://www.mongodb.com/atlas/database) 
