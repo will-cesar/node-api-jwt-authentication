@@ -8,7 +8,10 @@
     - [Additional features](#additional-features)
 - [Tech stacks](#tech-stacks)
 - [Run app](#run-app)
-    - [Step 1 - Run docker compose](#step-1)
+    - [Development environment](#development-environment)
+        - [Step 1 - Run docker compose](#step-1)
+        - [Step 2 - Setting environment variables](#step-2)
+        - [Step 3 - Run the App](#step-3)
 
 ## <a name="about"></a> About
 - Repository to JWT Authentication API
@@ -42,9 +45,11 @@
 - MongoDB 
 - Docker
 
-## Run app
+## <a name="run-app"></a> Run app 
 
-### <a name="step-1"></a> Step 1 - Run docker compose
+### <a name="development-environment"></a> Development environment
+
+#### <a name="step-1"></a> Step 1 - Run docker compose
 - In the first step is necessary execute the **docker-compose**
 - Docker is responsible for creating a container to run the database, the mongoDB, locally
 - The file `docker-compose.yml` is responsible for downloading the **mongoDB** and **mongo express** image and configurate the respective containers
@@ -67,4 +72,12 @@ At other times:
 docker start [container-id] or [container-name]
 ```
 
-### <a name="step-2"></a> Step 2 - Run the app
+#### <a name="step-2"></a> Step 2 - Setting environment variables
+- The `.env` file is responsible to set the environment variables of application
+- Rename the file `.env.example` to `.env` (or create a `.env` file) and fill in the blanks with your values
+
+#### <a name="step-3"></a> Step 3 - Run the App
+
+```
+npm start
+```
