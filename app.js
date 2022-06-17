@@ -100,7 +100,6 @@ app.post('/auth/login', async (req, res) => {
     }
 });
 
-
 const dbUser = process.env.DB_USER;
 const dbPassword = process.env.DB_PASS;
 const urlConnection = `mongodb://${dbUser}:${dbPassword}@localhost:27017/`;
@@ -109,6 +108,6 @@ mongoose
     .connect(urlConnection)
     .then(() => {
         app.listen(3000);
-        console.log('Conectou ao banco!');
+        console.log('API running at: http://localhost:3000');
     })
     .catch(err => console.log(err));

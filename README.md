@@ -79,5 +79,5 @@ docker start [container-id] or [container-name]
 #### <a name="step-3"></a> Step 3 - Run the App
 
 ```
-npm start
+npm run dev
 ```
