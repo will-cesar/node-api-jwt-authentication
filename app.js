@@ -9,14 +9,14 @@ const app = express();
 // Connection with database
 connectToDb();
 
-// Config JSON response
+// Config to JSON response
 app.use(express.json());
 
 // App routes
 app.use(routes);
 
+// Run app
 const PORT = process.env.PORT || 3000;
-
 app.listen(PORT, () => {
     console.log(`API running at: ${PORT}`);
 });
