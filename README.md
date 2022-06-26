@@ -63,7 +63,7 @@
         - Run the command to set password (root is the username configured in the docker compose): `db.auth('root', passwordPrompt())`
         - Write the password (configured in the docker compose): `example`
 
-At firs time:
+At first time:
 ```
 docker-compose up
 ```
