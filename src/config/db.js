@@ -4,21 +4,18 @@ const mongoose = require('mongoose');
 const DB_URL_CONNECTION = process.env.DB_URL_CONNECTION;
 
 const connectDb = () => {
-    return mongoose
-        .connect(
-            DB_URL_CONNECTION, 
-            error => {
-                if (error) {
-                    console.log("Connection to DB failed!!");
-                }
-                else {
-                    console.log('Connection to DB success!!');
-                }
-            }
-        );
+    mongoose.connect(
+        DB_URL_CONNECTION,
+        {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        }
+    );
+
+    const db = mongoose.connection;
+    db.on("error", error => console.error(error));
+    db.once("open", () => console.log('Connected to the database!'));
 }
 
-const db = mongoose.connection;
-db.on("error", console.error.bind(console, "MongoDB connection error"));
 
 module.exports = connectDb;
