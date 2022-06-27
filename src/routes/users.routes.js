@@ -1,5 +1,6 @@
 const express = require('express'); 
 const bcrypt = require('bcrypt');
+const { v4: uuid } = require('uuid');
 const User = require('../models/User');
 const checkToken = require('../middlewares/check-token.middleware');
 
@@ -22,7 +23,12 @@ router.post('/', async (req, res) => {
     const passwordHash = await bcrypt.hash(password, salt);
 
     // create user
-    const user = new User({ name, email, password: passwordHash });
+    const user = new User({ 
+        _id: uuid(), 
+        name, 
+        email, 
+        password: passwordHash 
+    });
 
     try {
         await user.save(); // save user in database
@@ -38,7 +44,7 @@ router.get('/:id', checkToken, async (req, res) => {
     const id = req.params.id;
 
     try {
-        const user = await User.findById(id, '-password'); // '-password' remove the password from response
+        const user = await User.findById(id);
         if (!user) return res.status(404).json({ msg: 'Usuário não encontrado!' });
     
         res.status(200).json({ user });
